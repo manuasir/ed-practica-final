@@ -71,32 +71,30 @@ void ArbolGeneral<Tbase>::lee_arbol(std::istream& in, nodo * & nod){
   if (in.get(c)){
     switch (c){
       case 'x':
-      nod=0;
-      break;
+        nod=0;
+        break;
       case 'n':
-      Tbase et;
-      in>>et;
-      // cout<<"Leida "<<et<<endl; cin.get();
-      nod=new nodo;
-      nod->etiqueta=et;
-      nod->padre=0;
-      nod->izqda=0;
-      nod->drcha=0;
-      lee_arbol(in,nod->izqda);
-
-      lee_arbol(in,nod->drcha);
-      if (nod->izqda!=0){
-        nod->izqda->padre=nod;
-        if (nod->izqda->drcha!=0) {
-          nodo * aux = nod->izqda;
-          while (aux->drcha!=0){
-            aux->drcha->padre=nod->izqda->padre;
-            aux = aux->drcha;
+        Tbase et;
+        //  in>>et;
+        // cout<<"Leida "<<et<<endl; cin.get();
+        nod=new nodo;
+        nod->etiqueta=et;
+        nod->padre=0;
+        nod->izqda=0;
+        nod->drcha=0;
+        lee_arbol(in,nod->izqda);
+        lee_arbol(in,nod->drcha);
+        if (nod->izqda!=0){
+          nod->izqda->padre=nod;
+          if (nod->izqda->drcha!=0) {
+            nodo * aux = nod->izqda;
+            while (aux->drcha!=0){
+              aux->drcha->padre=nod->izqda->padre;
+              aux = aux->drcha;
+            }
           }
         }
-      }
-      break;
-
+        break;
     }
   }
   else
