@@ -55,24 +55,26 @@ void Ontologias::clear(){
 }
 
 
-map<string,set<string> > Ontologias::GetSinonimos(const string & palabra)const{
+map<string,set<string> > Ontologias::GetSinonimos(const string & palabra){
   const_iterator ite;
   map<string,set<string> > aux;
   set<string>::iterator it;
+  set<string> sinonimos;
   bool encontrado=false;
-  //int indice;
+  int indice;
   for(ite=begin();ite!=end() and !encontrado;++ite){
     for(it=(*ite).first.begin();it!=(*ite).first.end();++it){
 
       if((*it) == palabra){
         encontrado = true;
-
       }
     }
   }
-  //indice = (*ite).second;
-  //string significado = significados.find(1);
-  //aux[significado] = (*ite).first;
+  //cout << (*ite).second;
+
+  indice = (*ite).second;
+  string significado = significados[indice];
+  aux[significado] = (*ite).first;
   return aux;
 }
 

@@ -93,7 +93,7 @@ public:
   * @return una coleccion de   pares significados y palabras sinonimas a la palabra introducida
   * por el usuario y la misma palabra que tiene ese significado clave
   */
-  map<string,set<string> > GetSinonimos(const string & palabra)const;
+  map<string,set<string> > GetSinonimos(const string & palabra);
 
 
   /**
