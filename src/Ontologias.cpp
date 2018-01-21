@@ -53,4 +53,10 @@ void Ontologias::clear(){
   ab.clear();
   significados.clear();
 }
+
+
+map<string,set<string> > Ontologias::GetSinonimos(const string & palabra)const{
+
+}
+
 /*____________________________________________________________ */
