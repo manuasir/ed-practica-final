@@ -49,4 +49,8 @@ bool Ontologias::Lee(const char * fich_jerarquia,const char * fic_significados){
   return aux;
 }
 
+void Ontologias::clear(){
+  ab.clear();
+  significados.clear();
+}
 /*____________________________________________________________ */

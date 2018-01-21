@@ -42,7 +42,7 @@ int main(int argc, char * argv[]){
   string test_salida1=string(argv[1])+"back";
   string test_salida2=string(argv[2])+"back";
   Ot.Escribe(test_salida1.c_str(),test_salida2.c_str());
-/*
+
   int level;
   cout<<"Dime un nivel de tematica (1),(2),(3)"<<endl;
   cin>>level;
@@ -61,7 +61,7 @@ int main(int argc, char * argv[]){
 cout<<endl;
 }
 cin.get();cin.get();
-
+/*
 //Seccion 3: probando preguntasED
 
 cout<<"Test PreguntasED************************************"<<endl;
