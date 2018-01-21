@@ -64,17 +64,16 @@ map<string,set<string> > Ontologias::GetSinonimos(const string & palabra){
   int indice;
   for(ite=begin();ite!=end() and !encontrado;++ite){
     for(it=(*ite).first.begin();it!=(*ite).first.end();++it){
-
       if((*it) == palabra){
+        indice = (*ite).second;
+        string significado = significados[indice];
+        aux[significado] = (*ite).first;
         encontrado = true;
       }
     }
   }
   //cout << (*ite).second;
 
-  indice = (*ite).second;
-  string significado = significados[indice];
-  aux[significado] = (*ite).first;
   return aux;
 }
 

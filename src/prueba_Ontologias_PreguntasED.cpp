@@ -21,54 +21,54 @@ int main(int argc, char * argv[]){
   f>>ab;
   ArbolGeneral<pair<set<string>,int> >::iter_preorden it;
   for (it=ab.begin();it!=ab.end();++it){
-    if (it.getlevel()<3){
-      for (int i=0;i<=it.getlevel();i++)
-      cout<<"----";
-      cout<<it.getlevel()<<".-";
-      pair<set<string>,int> aux= *it;
-      set<string>::iterator sit=aux.first.begin();
-      while (sit!=aux.first.end()){
-        cout<<*sit<<", ";++sit;
-      }
-      cout<<endl;
+  if (it.getlevel()<3){
+  for (int i=0;i<=it.getlevel();i++)
+  cout<<"----";
+  cout<<it.getlevel()<<".-";
+  pair<set<string>,int> aux= *it;
+  set<string>::iterator sit=aux.first.begin();
+  while (sit!=aux.first.end()){
+  cout<<*sit<<", ";++sit;
+}
+cout<<endl;
 
-    }
-  }
+}
+}
 */
 
 
 
 
 
-  //Seccion 2: probando Ontologias
-  Ontologias Ot;
+//Seccion 2: probando Ontologias
+Ontologias Ot;
 
-  //Lee la estructura jerarquica de las palabras y sus
-  //significados.
-  Ot.Lee(argv[1],argv[2]);
+//Lee la estructura jerarquica de las palabras y sus
+//significados.
+Ot.Lee(argv[1],argv[2]);
 
 
 
 /*
-  //comprobar que es correcta la lectura escribiendo ontologias.
-  string test_salida1=string(argv[1])+"back";
-  string test_salida2=string(argv[2])+"back";
-  Ot.Escribe(test_salida1.c_str(),test_salida2.c_str());
+//comprobar que es correcta la lectura escribiendo ontologias.
+string test_salida1=string(argv[1])+"back";
+string test_salida2=string(argv[2])+"back";
+Ot.Escribe(test_salida1.c_str(),test_salida2.c_str());
 
-  int level;
-  cout<<"Dime un nivel de tematica (1),(2),(3)"<<endl;
-  cin>>level;
+int level;
+cout<<"Dime un nivel de tematica (1),(2),(3)"<<endl;
+cin>>level;
 
-  cout<< "Las temáticas posibles a nivel"<<level<<" son:"<<endl;
-  Ontologias::iterator_level itl;
-  int cnt=1;
-  for (itl=Ot.beginl(level);itl!=Ot.endl(); ++itl){
-  pair<set<string>,int> aux= *itl;
-  set<string>::iterator sit=aux.first.begin();
-  cout<<"Temática "<<cnt;
-  cnt++;
-  while (sit!=aux.first.end()){
-  cout<<*sit<<", ";++sit;
+cout<< "Las temáticas posibles a nivel"<<level<<" son:"<<endl;
+Ontologias::iterator_level itl;
+int cnt=1;
+for (itl=Ot.beginl(level);itl!=Ot.endl(); ++itl){
+pair<set<string>,int> aux= *itl;
+set<string>::iterator sit=aux.first.begin();
+cout<<"Temática "<<cnt;
+cnt++;
+while (sit!=aux.first.end()){
+cout<<*sit<<", ";++sit;
 }
 cout<<endl;
 }
@@ -80,8 +80,16 @@ cin.get();cin.get();
 
 
 
-string city = "iris";
+string city = "adriatic";
 map<string,set<string> > aux = Ot.GetSinonimos(city);
+map<string,set<string> >::iterator ite;
+set<string>::iterator itt;
+for(ite=aux.begin();ite!=aux.end();++ite){
+  cout << (*ite).first;
+  for(itt=(*ite).second.begin();itt!=(*ite).second.end();++itt){
+    cout << (*itt) << " ";
+  }
+}
 /*
 //Seccion 3: probando preguntasED
 
