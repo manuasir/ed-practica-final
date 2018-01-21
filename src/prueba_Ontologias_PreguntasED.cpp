@@ -37,12 +37,12 @@ int main(int argc, char * argv[]){
   //Lee la estructura jerarquica de las palabras y sus
   //significados.
   Ot.Lee(argv[1],argv[2]);
-/*
-  //comprobar que es correcta la lectura escribiendo ontologias.
-  string test_salida1=argv[1]+"back";
-  string test_salida2=argv[2]+"back";
-  Ot.Escribe(test_salida1.c_str(),test_salida2.c_str());
 
+  //comprobar que es correcta la lectura escribiendo ontologias.
+  string test_salida1=string(argv[1])+"back";
+  string test_salida2=string(argv[2])+"back";
+  Ot.Escribe(test_salida1.c_str(),test_salida2.c_str());
+/*
   int level;
   cout<<"Dime un nivel de tematica (1),(2),(3)"<<endl;
   cin>>level;

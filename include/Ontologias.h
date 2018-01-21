@@ -6,7 +6,6 @@
 #include <map>
 #include <set>
 #include <list>
-#include <vector>
 using namespace std;
 /**
 * @file Ontologias.h: TDA Ontologias

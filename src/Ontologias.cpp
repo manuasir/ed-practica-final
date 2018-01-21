@@ -23,6 +23,20 @@ bool Ontologias::lee_significados(const char * fich_sig){
   return true;
 }
 
+bool Ontologias::Escribe(const char * fich_jerarquia,const char * fic_significados){
+  ofstream os;
+  os.open("salidaSignificados.txt");
+  map<int,string>::iterator ite;
+  for(ite=significados.begin();ite!=significados.end();++ite) {
+    os<<(*ite).first;
+    os<<" ";
+    os<<(*ite).second;
+    os<<'\n';
+  }
+  os.close();
+  return true;
+}
+
 
 bool Ontologias::Lee(const char * fich_jerarquia,const char * fic_significados){
   bool aux = true;
