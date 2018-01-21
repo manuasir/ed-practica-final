@@ -111,7 +111,7 @@ public:
   /**
   * @brief Obtiene el significado de una posición determinada
   */
-  string GetDefinicion(int pos);
+  string GetDefinicion(int pos){ return significados[pos]; };
 
 
   /**

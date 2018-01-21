@@ -35,8 +35,22 @@ void PreguntasED::IniciaConceptosTemaEscogido(){
   Ontologias::iterator it(ite);
   set<string>::iterator itSet;
   for(it=Ot.begin();it!=Ot.end();++it){
-    for(itSet=(*it).first.begin();itSet!=(*it).first.end();++itSet){
-      cout << (*itSet);
-    }
+    preguntas_tema.push_back(it);
   }
+}
+
+pair<set<string>,string> PreguntasED::SacaPregunta(){
+  Ontologias::iterator ite = preguntas_tema.back();
+  string cadena = Ot.GetDefinicion((*ite).second);
+  pair<set<string>,string> aux((*ite).first, cadena);
+  preguntas_tema.pop_back();
+  return aux;
+}
+
+pair<set<string>,string> PreguntasED::GetPregunta(int i){
+  Ontologias::iterator ite = preguntas_tema[i];
+  string cadena = Ot.GetDefinicion((*ite).second);
+  pair<set<string>,string> aux((*ite).first, cadena);
+  preguntas_tema.pop_back();
+  return aux;
 }

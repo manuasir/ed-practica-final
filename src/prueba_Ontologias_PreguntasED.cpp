@@ -81,7 +81,7 @@ int main(int argc, char * argv[]){
 
   cout<<"Test PreguntasED************************************"<<endl;
 
-  PreguntasED Ask(Ot,1);
+  PreguntasED Ask(Ot,5);
   Ask.MuestraTematicas();
 
   cout<<"Escoge una de las tematicas posibles:";
@@ -91,23 +91,22 @@ int main(int argc, char * argv[]){
   cout << "el titulo " << Ask.GetTitleTematica();
 
   Ask.IniciaConceptosTemaEscogido();
-/*
+
   cout<<"**************************************"<<endl;
   cin.get();
-  Ask.BarajarPreguntas();
+  //Ask.BarajarPreguntas();
   int i=0;
   while (i<Ask.num_preguntas()){
-  pair<set<string>,string> p= Ask.SacaPregunta();
-  cout<<p.second<<"?";
-  string con;
-  getline(cin,con);
-  if (p.first.find(con)!=p.first.end()){
-  cout<<"Correcta"<<endl;
-}
-else
-cout<<"NO es correcta la contestacion es cualquiera de las palabras: "<<p.first<<endl;
-++i;
-}
+    pair<set<string>,string> p= Ask.SacaPregunta();
+    cout<<p.second<<"?";
+    string con;
+    getline(cin,con);
+    if (p.first.find(con)!=p.first.end()){
+      cout<<"Correcta"<<endl;
+    }
+    else
+      cout<<"NO es correcta la contestacion es cualquiera de las palabras: ";
+    ++i;
+  }
 
-*/
 }
