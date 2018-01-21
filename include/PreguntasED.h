@@ -16,8 +16,8 @@
    en una temática, a partir de su definición o significado.
    <tt>\#include PreguntasED.h</tt>
 
-   @author
-   @date
+   @author Manuel Jiménez Bernal
+   @date January 2018
 */
 
 

@@ -83,12 +83,15 @@ int main(int argc, char * argv[]){
 
   PreguntasED Ask(Ot,1);
   Ask.MuestraTematicas();
-  /*
+
   cout<<"Escoge una de las tematicas posibles:";
   int ntema;
   cin>>ntema;
   Ask.SetTematica(ntema);
+  cout << "el titulo " << Ask.GetTitleTematica();
+  /*
   Ask.IniciaConceptosTemaEscogido();
+
   cout<<"**************************************"<<endl;
   cin.get();
   Ask.BarajarPreguntas();

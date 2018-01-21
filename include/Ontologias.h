@@ -29,18 +29,17 @@ Así madrid y capital de españa son sinónimos. El siguiente nivel son superpal
 <tt>\#include Ontologias.h</tt>
 
 
-@author
-@date
+@author Manuel Jiménez Bernal
+@date January 2018
 */
 
 
 class Ontologias{
   /**
   * @page repOntologias Rep del TDA Ontologias
-  *
+  * ArbolGeneral<pair<set<string>,int> > ab
   * @section invOntologias Invariante de la representación
-  *
-  * Añadir el invariante de la representación
+  * rep.ab && n_palabras>0
   *
   * @section faOntologias Función de abstracción
   *
@@ -162,6 +161,7 @@ public:
     * @brief constructor
     */
     iterator_level(){ level=-1;}
+    iterator_level(int lev){ level = lev; }
     /**
     * @brief  Consulta/modificador la información del iterador
     * @note el primer elemento del par es el conjunto de palabras sinonimas en dicho nodo
