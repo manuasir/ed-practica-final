@@ -6,19 +6,19 @@
 #include<set>
 using namespace std;
 
-istream & operator >> (istream & in, pair<set<string>, int> & elPar) {
-  string num;
-  getline(in,num,' ');
-  int numSinonimos = stoi(num);
-  string termino;
-  int total = 0;
-  do {
-    getline(in,termino,',');
-    elPar.first.insert(termino);
-    total+=1;
-  } while(numSinonimos < total);
-  in>>elPar.second;
-  return in;
+istream & operator >> (istream & is, pair<set<string>, int> & miPar) {
+  string numero;
+  getline(is,numero,' ');
+  int palabras = stoi(numero);
+  string pal;
+  int introducidas = 0;
+  do{
+    getline(is,pal,',');
+    miPar.first.insert(pal);
+    introducidas++;
+  }while(palabras>introducidas);
+  is>>miPar.second;
+  return is;
 }
 
 ostream & operator << (ostream & os, pair<set<string>, int> & elPar) {
