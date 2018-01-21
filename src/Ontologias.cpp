@@ -72,9 +72,11 @@ map<string,set<string> > Ontologias::GetSinonimos(const string & palabra){
       }
     }
   }
-  //cout << (*ite).second;
-
+  //cout << (*ite).second
   return aux;
 }
+
+
+
 
 /*____________________________________________________________ */

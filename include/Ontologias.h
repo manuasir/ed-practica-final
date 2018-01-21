@@ -107,7 +107,7 @@ public:
   spanish capital,capital of spain,madrid,;national capital,;capital,;seat,;eye,heart,middle,centre,center,;country,area,;region,;location,;physical object,object,;physical entity,;entity,;
   @exception: devuvelve una lista vacía sin no tiene es una palabra que existe en la ontologias o palabra no tiene ninguna superpalabra.
   */
-  list<set<string> > GetSuperPalabra(const string & palabra,const string & signifi)const;
+  list<set<string> > GetSuperPalabra(const string & palabra,const string & signifi);
 
   /**
   * @brief Obtiene el significado de una posición determinada
