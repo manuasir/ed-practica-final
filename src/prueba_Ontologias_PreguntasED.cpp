@@ -89,9 +89,9 @@ int main(int argc, char * argv[]){
   cin>>ntema;
   Ask.SetTematica(ntema);
   cout << "el titulo " << Ask.GetTitleTematica();
-  /*
-  Ask.IniciaConceptosTemaEscogido();
 
+  Ask.IniciaConceptosTemaEscogido();
+/*
   cout<<"**************************************"<<endl;
   cin.get();
   Ask.BarajarPreguntas();

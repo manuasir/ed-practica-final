@@ -29,3 +29,14 @@ string PreguntasED::GetTitleTematica(){
   }
   return aux;
 }
+
+void PreguntasED::IniciaConceptosTemaEscogido(){
+  Ontologias::iterator_level ite = temas[tematica_escogida];
+  Ontologias::iterator it(ite);
+  set<string>::iterator itSet;
+  for(it=Ot.begin();it!=Ot.end();++it){
+    for(itSet=(*it).first.begin();itSet!=(*it).first.end();++itSet){
+      cout << (*itSet);
+    }
+  }
+}
