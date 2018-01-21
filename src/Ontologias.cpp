@@ -6,15 +6,19 @@
 /*____________________________________________________________ */
 
 bool Ontologias::lee_significados(const char * fich_sig){
-  ifstream significados (fich_sig);
+  ifstream flujo (fich_sig);
   string line;
-  while (getline(significados, line)) {
+  while (getline(flujo, line)) {
     string index = line;
     const char * cstr = line.c_str();
     //cout << "una linea:" << index << '\n';
     int i;
     for(i=0 ; i<int(line.size()) and cstr[i] != ' ';i++);
-    cout << line.substr(0,i) << '\n';
+    int key = stoi(line.substr(0,i));
+    string significado = line.substr(i,line.size());
+    //cout << "una key " << key << '\n';
+    //cout << "un sign" << significado << '\n';
+    significados[key] = significado;
   }
   return true;
 }
