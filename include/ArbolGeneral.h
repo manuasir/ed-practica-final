@@ -3,8 +3,23 @@
 
 #include <cassert>
 #include <iostream>
+#include<set>
 using namespace std;
 
+istream & operator >> (istream & in, pair<set<string>, int> & elPar) {
+  string num;
+  getline(in,num,' ');
+  int numSinonimos = stoi(num);
+  string termino;
+  int total = 0;
+  do {
+    getline(in,termino,',');
+    elPar.first.insert(termino);
+    total+=1;
+  } while(numSinonimos < total);
+  in>>elPar.second;
+  return in;
+}
 /**
    @brief T.D.A. ArbolGeneral
 
