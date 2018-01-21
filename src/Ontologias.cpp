@@ -34,6 +34,9 @@ bool Ontologias::Escribe(const char * fich_jerarquia,const char * fic_significad
     os<<'\n';
   }
   os.close();
+  os.open("salidaArbol.txt");
+  os<<ab;
+  os.close();
   return true;
 }
 

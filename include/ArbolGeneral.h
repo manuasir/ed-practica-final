@@ -20,6 +20,21 @@ istream & operator >> (istream & in, pair<set<string>, int> & elPar) {
   in>>elPar.second;
   return in;
 }
+
+ostream & operator << (ostream & os, pair<set<string>, int> & elPar) {
+  set<string>::iterator ite;
+  os<<elPar.first.size();
+  for(ite=elPar.first.begin();ite!=elPar.first.end();++ite){
+    os<<(*ite);
+  }
+  os<<elPar.second;
+
+  return os;
+}
+
+
+
+
 /**
    @brief T.D.A. ArbolGeneral
 
