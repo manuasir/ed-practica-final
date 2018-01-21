@@ -96,7 +96,6 @@ public:
   map<string,set<string> > GetSinonimos(const string & palabra)const;
 
 
-
   /**
   * @brief Devuelve  todas las tematícas (con sus sinonimos) hasta la temática raiz de una palabra con un significado concreto.
   * @param palabra: palabra a buscar
