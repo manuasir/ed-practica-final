@@ -22,20 +22,17 @@
 
 
 
-
-
-
 class PreguntasED{
    /**
   * @page repPreguntasED Rep del TDA PreguntasED
-  *
+  * Ontologias Ot;
   * @section invPreguntasED Invariante de la representación
+  * rep.Ot.size() > 0
   *
-  * Añadir el invariante de la representación
   *
   * @section faPreguntasED Función de abstracción
   *
-  * Añadir la función de abstracción
+  * f(A) = {}
   */
   private:
     int tl;//nivel de la tematica escogida
